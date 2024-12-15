@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Expenses Prediction</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<style>
+    body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        font-size: 1rem;
+        font-weight: 600;
+        line-height: 1.8;
+        color: #032547;
+        text-align: left;
+        background-color: #f3eeee;
+    }
+.pre {
+        display: flex;
+        justify-content: center; /* Horizontally centers the button */
+        align-items: center; /* Vertically centers the button */
+      
+}
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 6px;
+    background-color: green; 
+    color: #ffffff; 
+    cursor: pointer;
+    align:center ;
+  }
+  
+  /* Hover effect */
+  .btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+    
+
+</style>
+<body>
+
+<div class="container mt-5">
+    <p>This is a paragraph.</p>
+    <img src=“https://image.khaleejtimes.com/?uuid=c4194de4-2ff1-4be4-b8d8-f038aa7f502c&function=cropresize&type=preview&source=false&q=75&crop_w=0.99999&crop_h=0.84746&x=0&y=0&width=1200&height=675” alt=“an artist's rendition of a black hole in space”>
+    
+    
+
+    <h1>Medical Expenses Prediction</h1>
+
+    <form action="/predict" method="post">
+        <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="number" class="form-control" id="age" name="age" required>
+        </div>
+        <div class="form-group">
+            <label for="sex">Sex:</label>
+            <select class="form-control" id="sex" name="sex" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="bmi">BMI:</label>
+            <input type="number" step="0.01" class="form-control" id="bmi" name="bmi" required>
+        </div>
+        <div class="form-group">
+            <label for="children">Number of Children:</label>
+            <input type="number" class="form-control" id="children" name="children" required>
+        </div>
+        <div class="form-group">
+            <label for="smoker">Smoker:</label>
+            <select class="form-control" id="smoker" name="smoker" required>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="region">Region:</label>
+            <select class="form-control" id="region" name="region" required>
+                <option value="southwest">Southwest</option>
+                <option value="southeast">Southeast</option>
+                <option value="northwest">Northwest</option>
+                <option value="northeast">Northeast</option>
+            </select>
+        </div>
+        <div class="pre">
+        <button type="submit" class="btn btn-primary">Predict</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
